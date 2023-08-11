@@ -1,4 +1,4 @@
-from sense_logging import Log
+import logging
 import RPi.GPIO as GPIO
 
 
@@ -6,12 +6,12 @@ class Relay:
 
     def __init__(self, pin: int):
         self.pin = pin
-        self.logger = Log(f"Relay_{pin}")
+        self.logger = logging.getLogger(__name__)
 
         GPIO.setmode(GPIO.BOARD)
-        self.logger.print_log("GPIO setmode")
+        self.logger.info("GPIO setmode")
         GPIO.setup(pin, GPIO.OUT)
-        self.logger.print_log(f"GPIO pin{self.pin} setup()")
+        self.logger.info(f"GPIO pin{self.pin} setup(output)")
 
         self.on = False
         self.open()
@@ -19,12 +19,12 @@ class Relay:
     def open(self):
         GPIO.output(self.pin, GPIO.LOW)
         self.on = False
-        self.logger.print_log(f"Relay on pin {self.pin} open circuit")
+        self.logger.info(f"Relay on pin {self.pin} open circuit")
 
     def close(self):
         GPIO.output(self.pin, GPIO.HIGH)
         self.on = True
-        self.logger.print_log(f"Relay on pin {self.pin} close circuit")
+        self.logger.info(f"Relay on pin {self.pin} close circuit")
 
     def toggle(self):
         self.open() if self.on else self.close()
@@ -33,5 +33,6 @@ class Relay:
         return self.on
 
     def __del__(self):
+        self.open()
         GPIO.cleanup()
-        self.logger.print_log("GPIO cleanup()")
+        self.logger.info("GPIO cleanup()")

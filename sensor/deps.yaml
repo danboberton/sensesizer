@@ -3,6 +3,7 @@ python:
   version: 3.9.2
   deps:
     - raspberry-gpio-python
+    - adafruit-circuitpython-seesaw
 
 bash:
   tools:
