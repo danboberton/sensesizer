@@ -12,7 +12,7 @@ class AutoSprinkler(SensorInterface):
 
     def test(self):
         interval = 3
-        relay = Relay(16)
+        relay = Relay(11)
 
         self.print_log("Starting Test Loop, awaiting Keyboard Interupt")
         try:
