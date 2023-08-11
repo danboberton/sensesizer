@@ -1,0 +1,9 @@
+# Dependencies
+python:
+  version: 3.9.2
+  deps:
+    - raspberry-gpio-python
+
+bash:
+  tools:
+    - python3-gpiozero
