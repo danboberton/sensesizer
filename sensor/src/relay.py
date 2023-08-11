@@ -1,4 +1,4 @@
-from sensor import Log
+from sense_logging import Log
 import RPi.GPIO as GPIO
 
 

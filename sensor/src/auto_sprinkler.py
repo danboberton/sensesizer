@@ -1,7 +1,7 @@
 import time
 
-from sensor.src.relay import Relay
-from sensor.src.logging import Log
+from relay import Relay
+from sense_logging import Log
 
 
 class AutoSprinkler:
