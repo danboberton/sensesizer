@@ -5,7 +5,7 @@ from sensors.auto_sprinkler import AutoSprinkler
 def main():
     log = Log('Main Log')
 
-    sprinkler = AutoSprinkler(log)
+    sprinkler = AutoSprinkler()
     sprinkler.test()
 
 

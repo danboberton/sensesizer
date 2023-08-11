@@ -8,13 +8,13 @@ from sensor.src.sensors.iSensor import SensorInterface
 class AutoSprinkler(SensorInterface):
 
     def __init__(self):
-        super().__init__()
+        self.logger = Log("AutoSprinkler")
 
     def test(self):
         interval = 3
         relay = Relay(11)
 
-        self.print_log("Starting Test Loop, awaiting Keyboard Interupt")
+        self.logger.print_log("Starting Test Loop, awaiting Keyboard Interrupt")
         try:
             while True:
                 relay.toggle()
