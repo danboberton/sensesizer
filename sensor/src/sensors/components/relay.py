@@ -22,7 +22,7 @@ class Relay:
         self.logger.print_log(f"Relay on pin {self.pin} open circuit")
 
     def close(self):
-        GPIO.output(self.pin, GPIO.LOW)
+        GPIO.output(self.pin, GPIO.HIGH)
         self.on = True
         self.logger.print_log(f"Relay on pin {self.pin} close circuit")
 

@@ -1,11 +1,10 @@
 import time
 
-from sensor.src.logging import Log
-from sensor.src.sensors.components.relay import Relay
-from sensor.src.sensors.iSensor import SensorInterface
+from ..logging import Log
+from components.relay import Relay
 
 
-class AutoSprinkler(SensorInterface):
+class AutoSprinkler:
 
     def __init__(self):
         self.logger = Log("AutoSprinkler")
