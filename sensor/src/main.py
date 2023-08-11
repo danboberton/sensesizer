@@ -1,6 +1,5 @@
 from logging import Log
-from sensor.src.sensors.auto_sprinkler import AutoSprinkler
-from sensors import auto_sprinkler
+from sensors.auto_sprinkler import AutoSprinkler
 
 
 def main():
