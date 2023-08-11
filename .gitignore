@@ -1,0 +1,5 @@
+# Local Dev
+.idea/
+
+# Environmental Variables
+*.env
