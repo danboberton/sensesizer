@@ -1,9 +1,7 @@
-from logging import Log
-from sensors.auto_sprinkler import AutoSprinkler
+from auto_sprinkler import AutoSprinkler
 
 
 def main():
-    log = Log('Main Log')
 
     sprinkler = AutoSprinkler()
     sprinkler.test()

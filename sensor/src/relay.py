@@ -1,4 +1,4 @@
-from sensor.src.logging import Log
+from sensor import Log
 import RPi.GPIO as GPIO
 
 

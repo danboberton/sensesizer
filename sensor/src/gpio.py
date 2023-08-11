@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+# from https://learn.sparkfun.com/tutorials/raspberry-gpio/python-rpigpio-example
 import RPi.GPIO as GPIO
 import time
 
